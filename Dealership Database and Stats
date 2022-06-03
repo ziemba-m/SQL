@@ -1,0 +1,26 @@
+--Create an inventory list for a car dealership
+
+CREATE TABLE dealership (id integer primary key, year integer, make text, model text, price integer);
+
+INSERT INTO dealership VALUES
+(1, 2017, "Toyota", "Camry", 18500),
+(2, 2019, "Honda", "Pilot", 25000),
+(3, 2013, "Subaru", "Impreza", 8500),
+(4, 2012, "Ford", "Taurus", 10000),
+(5, 2007, "Ford", "F-150", 6000),
+(6, 2015, "Honda", "Odyssey", 9000),
+(7, 2022, "Chevrolet", "Silverado 1500", 60000),
+(8, 2016, "Hyundai", "Sonata", 17000),
+(9, 2013, "Chevrolet", "Cruze", 15000),
+(10, 2021, "Hyundai", "Palisade", 39000),
+(11, 2021, "Hyundai", "Sonata", 22000),
+(12, 2001, "Ford", "Fusion", 750),
+(13, 2013, "Ford", "Edge", 16000),
+(14, 2011, "Mazda", "MX-5", 11000),
+(15, 2021, "Hyundai", "Sonata", 19000);
+
+--display the year and model vehicle by price
+SELECT year, model FROM dealership ORDER BY price desc;
+
+--what is the total inventory value for the dealership
+SELECT SUM(price) FROM dealership;
